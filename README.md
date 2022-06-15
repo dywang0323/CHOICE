@@ -3,7 +3,8 @@ This respository is used to record the data analysis processes of CHOICE project
 
 # Metagenome
 The process including preprocess, assemly, annotation, binning and statistic analysis
-/Preprocess
+1. Preprocess
+
 
 
 # Metaproteome
