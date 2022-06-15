@@ -10,7 +10,7 @@ The process including preprocess, assemly, annotation, binning and statistic ana
   cat person1_rep1.fastq person1_replicate2.fastq > person1.fastq
 
   * preprocessing the datasts, including remove adaptor, triming and error correction
-  * 
+
    Tool: bbmap
    
    a. remove adaptor
