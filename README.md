@@ -1,9 +1,10 @@
 # CHOICE
 This respository is used to record the data analysis processes of CHOICE project, the datasets in this project are mainly composed of metagenomics data and metaproteomics data
 
-For the metagenomics, they are 34 subjects from adults and 24 sujects (2 samples for each, 31week and 37 week) from infants (3 samples for most subjects, 2 week, 2 month and 4-5 month)
-
 # Metagenome
+
+there are 34 subjects from adults and 24 sujects (2 samples for each, 31week and 37 week) from infants (3 samples for most subjects, 2 week, 2 month and 4-5 month)
+
 The process including preprocess, assemly, annotation, binning and statistic analysis
 1. Preprocessing the dataset for assembly
  1) Tools/shelf commands
