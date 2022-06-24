@@ -10,7 +10,6 @@
 #SBATCH --mail-type=ALL
 #SBATCH --chdir=/scratch/dywang/
 
-
 # remove the adaptor
 
 # /work/omicsbio/dywang/bbmap/bbduk.sh in=/ourdisk/hpc/nullspace/dywang/dont_archive/CHOICE/falure/subsject/MY_INPUT out=/scratch/dywang/CHOICE/MY_INPUT ktrim=r k=23 mink=11 hdist=1 tpe tbo ref=/work/omicsbio/dywang/bbmap/resources/adapters.fa ftm=5 qtrim=r trimq=10
