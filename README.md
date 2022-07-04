@@ -15,7 +15,8 @@ The process including preprocess, assemly, annotation, binning and statistic ana
 
   * preprocessing the datasts, including remove adaptor, triming and error correction
 
-   Tool: bbmap
+   Tool: bbtools 
+   https://jgi.doe.gov/data-and-tools/software-tools/bbtools/
    
    a. remove adaptor
    bbmap/bbduk.sh in= input.fastq 
@@ -32,6 +33,21 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    bbmap/bbnorm.sh in=input.fastq.gz 
    out=output.fastq.gz 
    ecc=t keepall passes=1 bits=16 prefilter
+   
+   2. Assembly 
+   
+   1). Tool: Metaspades
+   https://github.com/ablab/spades
+   
+   2). command:
+   python /bin/metaspades.py --12 interleaved_reads.fq.gz -o scafford.fastq.gz
+   
+   3). quality control: calculate the mapping rate and N50
+   
+   a. Tool: bowtie2, bbstate
+   
+   
+   
 
   
 # Metaproteome
