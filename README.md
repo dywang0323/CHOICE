@@ -7,7 +7,7 @@ there are 34 subjects from adults and 24 sujects (2 samples for each, 31week and
 
 The process including preprocess, assemly, annotation, binning and statistic analysis
 1. Preprocessing the dataset for assembly
- 1) Tools/shell commands
+ 1). Tools/shell commands
  * merge the datasets based on which person the dataset came from
 
   cat person1_rep1.fastq person1_replicate2.fastq > person1.fastq
