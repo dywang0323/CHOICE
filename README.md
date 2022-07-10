@@ -46,7 +46,7 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    
    a. Tool: pullseq, bowtie2 and bbstate
    
-   *calculate the N50 (bbtools)
+   * calculate the N50 (bbtools)
    
    /bbmap/stats.sh in=/subject_scaffold.fasta out=/subject_scaffold
    
