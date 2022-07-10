@@ -3,7 +3,7 @@ This respository is used to record the data analysis processes of CHOICE project
 
 # Metagenome
 
-there are 34 subjects from adults and 24 sujects (2 samples for each, 31week and 37 week) from infants (3 samples for most subjects, 2 week, 2 month and 4-5 month)
+there are 34 subjects from adults (2 samples for each, 31week and 37 week)and 24 sujects from infants (3 samples for most subjects, 2 week, 2 month and 4-5 month)
 
 The process including preprocess, assemly, annotation, binning and statistic analysis
 1. Preprocessing the dataset for assembly
@@ -40,14 +40,39 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    https://github.com/ablab/spades
    
    2). command:
-   python /bin/metaspades.py --12 interleaved_reads.fq.gz -o scafford.fastq.gz
+   python /bin/metaspades.py --12 subject_interleaved_reads.fq.gz -o subject
    
    3). quality control: calculate the mapping rate and N50
    
-   a. Tool: bowtie2, bbstate
+   a. Tool: pullseq, bowtie2 and bbstate
+   
+   *calculate the N50 (bbtools)
+   
+   /bbmap/stats.sh in=/subject_scaffold.fasta out=/subject_scaffold
+   
+   * calculate mapping rate
+   
+   Sellect the scaffold with sequence length > 1000bp (pullseq)
+   
+   pullseq -i subject_scaffold.fasta -m 1000 > subject_scaffold_min1000.fasta
+   
+   create bowtie2 index file
+   
+   bowtie2-build subject_scaffold_min1000.fasta subject_min1000
+   
+   map reads to the scaffold
+   
+   bowtie2 -x --nounal /subject_min1000 -1 subject_eachSRR_1.fastq.gz
+                                        -2 subject_eachSRR_2.fastq.gz
+                                        -S subject_alignmnent.sam
+   
+   count the number of mapped reads
+   
+   wc -l subject_alignment.sam > subject_alignment.txt
+   
+   mapping rate = mapped reads/total reads  (the number of total reads is in the log file of metaspades)
    
    
    
-
-  
+    
 # Metaproteome
