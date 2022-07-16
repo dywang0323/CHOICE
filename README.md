@@ -34,6 +34,11 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    out=output.fastq.gz 
    ecc=t keepall passes=1 bits=16 prefilter
    
+   d. decontamination (bowtie2 and human genome assembly GRCh38)
+   
+   * create bowtie2 index file
+   
+   bowtie2-build GRCh38_assembly.fasta 
    2. Assembly 
    
    1). Tool: Metaspades
