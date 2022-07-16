@@ -9,7 +9,7 @@ The process including preprocess, assemly, annotation, binning and statistic ana
 1. Preprocessing the dataset for assembly
 
  1). Tools/shell commands
- * merge the datasets based on which person the dataset came from
+ * merge the datasets based on which person the dataset came from, and one person as one subject
 
   cat person1_rep1.fastq person1_replicate2.fastq > person1.fastq
 
@@ -34,9 +34,9 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    out=output.fastq.gz 
    ecc=t keepall passes=1 bits=16 prefilter
    
-   d. decontamination (bowtie2 and human genome assembly GRCh38)
+   d. decontamination (bbsplit and human genome assembly GRCh38)
    
-   * create bowtie2 index file
+  $bbsplit.sh in=subject.fq ref=GRCh38.fasta basename=out_%.fq outu=subject_clean.fastq
    
    bowtie2-build GRCh38_assembly.fasta 
    2. Assembly 
