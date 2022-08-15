@@ -77,6 +77,12 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    
    mapping rate = mapped reads/total reads  (the number of total reads is in the log file of metaspades)
    
+   3. Functional Annotation
+   
+   1). Tools: kofam_scan
+   https://github.com/takaram/kofam_scan
+   
+   
    
    
     
