@@ -86,6 +86,8 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    https://github.com/takaram/kofam_scan
    (The official installation instruction is put in the supplementary folder)
    
+   5. Binning
+   
    
    
    
