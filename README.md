@@ -88,6 +88,8 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    
    5. Binning
    
+   1). Software: metabat
+   https://bitbucket.org/berkeleylab/metabat/src/master/
    
    
    
