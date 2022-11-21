@@ -88,8 +88,10 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    
    5. Binning
    
-   1). Software: metabat
+   1). Software: metabat, CheckM
    https://bitbucket.org/berkeleylab/metabat/src/master/
+   https://github.com/Ecogenomics/CheckM
+   
    
    
    
