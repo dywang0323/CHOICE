@@ -92,6 +92,11 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    https://bitbucket.org/berkeleylab/metabat/src/master/
    https://github.com/Ecogenomics/CheckM
    
+   6. clustering
+   1). seperate quence name into full length and fractionation:
+   full length: grep "partial=00" your_dataset.txt > extracted_records.txt
+   fractionations: grep -v "partial=00" your_dataset.txt > extracted_records.txt
+   
    
    
    
