@@ -97,6 +97,17 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    full length: grep "partial=00" your_dataset.txt > extracted_records.txt
    fractionations: grep -v "partial=00" your_dataset.txt > extracted_records.txt
    
+   7. Peptidase annotation
+   
+   Download the peptidase database from:
+   https://www.ebi.ac.uk/merops/download_list.shtml
+   
+   Convert the .lib into fasta:
+   seqkit seq -o protease.fastq /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/protease.lib
+   
+   seqkit fq2fa protease.fastq -o /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/protease.fasta
+
+   
    
    
    
