@@ -91,6 +91,8 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    1). Software: metabat, CheckM
    https://bitbucket.org/berkeleylab/metabat/src/master/
    https://github.com/Ecogenomics/CheckM
+
+   43 MAGs can not be annotaed by MetaPhlAn 4 was used to calcuate 
    
    6. clustering
    1). seperate quence name into full length and fractionation:
