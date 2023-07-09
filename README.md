@@ -115,21 +115,21 @@ The process including preprocess, assemly, annotation, binning and statistic ana
       1). Install and build the database:
       metaphlan --install --bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/Database_meta
       2). Databasae searching
-      # Define the directory where your datasets are stored
+      Define the directory where your datasets are stored
 DATASET_DIR="/scratch/dywang/Zhou_Lab/YP/Preprocess/EC"
 
-# Iterate over the files in the dataset directory
+Iterate over the files in the dataset directory
 for dataset_file in "$DATASET_DIR"/*.fq.gz; do
-    # Get the filename without the directory path and extension
+     Get the filename without the directory path and extension
     filename=$(basename "$dataset_file")
     filename_without_extension="${filename%.*}"
 
-    # Decompress the input file if the uncompressed file does not exist
+     Decompress the input file if the uncompressed file does not exist
     if [ ! -f "${DATASET_DIR}/${filename_without_extension}.fastq" ]; then
         gunzip -c "$dataset_file" > "${DATASET_DIR}/${filename_without_extension}.fastq"
     fi
 
-    # Run MetaPhlAn on each dataset
+     Run MetaPhlAn on each dataset
     metaphlan "${DATASET_DIR}/${filename_without_extension}.fastq" --input_type fastq -o "${filename_without_extension}.txt" --bowtie2db Database_meta
 
 done
