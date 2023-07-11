@@ -1,0 +1,21 @@
+#!/bin/bash
+#SBATCH --partition=omicsbio
+#SBATCH --ntasks=1
+#SBATCH --time=100:00:00
+#SBATCH --job-name=Length_Pro
+#SBATCH --mem=5G
+#SBATCH --output=CHOICE_%J_stdout.txt
+#SBATCH --error=CHOICE_%J_stderr.txt
+#SBATCH --mail-user=dywang@ou.edu
+#SBATCH --mail-type=ALL
+#SBATCH --chdir=/scratch/dywang/
+
+# python /ourdisk/hpc/prebiotics/dywang/Batch/Length_pro.py /ourdisk/hpc/nullspace/dywang/dont_archive/CHOICE/Genome/gff_M/CHO01M_min1000.fasta.gff /ourdisk/hpc/prebiotics/dywang
+
+for file in /ourdisk/hpc/nullspace/dywang/dont_archive/CHOICE/Genome/gff_B/*.gff; 
+
+do 
+
+python /ourdisk/hpc/prebiotics/dywang/Batch/Length_pro.py "$file" /ourdisk/hpc/nullspace/dywang/dont_archive/CHOICE/Genome/Length_B;
+
+done
