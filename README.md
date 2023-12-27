@@ -52,7 +52,7 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    
    3). quality control: calculate the mapping rate and N50
    
-   a. Tool: pullseq, bowtie2 and bbstate
+   a. Tool: pullseq, bowtie2 (Bowtie2/2.2.9-intel-2016a) and bbstate
    
    * calculate the N50 (bbtools)
    
