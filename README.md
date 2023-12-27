@@ -7,10 +7,7 @@ There are 34 subjects from adults (2 samples for each, 31week and 37 week)and 24
 ![image](https://github.com/dywang0323/CHOICE/assets/60108209/aa7dd2e9-1647-449b-9c26-495d6e8a198c)
 
 
-# Metagenome
-
-
-
+## Metagenome
 The process including preprocess, assemly, annotation, binning and statistic analysis
 1. Preprocessing the dataset for assembly
 
