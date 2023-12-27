@@ -9,7 +9,7 @@ There are 34 subjects from adults (2 samples for each, 31week and 37 week)and 24
 
 ## Metagenome
 The process including preprocess, assemly, annotation, binning and statistic analysis
-1. Preprocessing the dataset for assembly
+### 1. Preprocessing the dataset for assembly
 
  1). Tools/shell commands
  * merge the datasets based on which person the dataset came from, and one person as one subject
@@ -42,7 +42,7 @@ The process including preprocess, assemly, annotation, binning and statistic ana
   $bbsplit.sh in=subject.fq ref=GRCh38.fasta basename=out_%.fq outu=subject_clean.fastq
    
    bowtie2-build GRCh38_assembly.fasta 
-   2. Assembly 
+  ### 2. Assembly 
    
    1). Tool: Metaspades
    https://github.com/ablab/spades
