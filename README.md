@@ -16,15 +16,14 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    ```
    cat person1_rep1.fastq person1_replicate2.fastq > person1.fastq
  * preprocessing the datasts, including remove adaptor, triming and error correction  
-     Tool: bbtools:https://jgi.doe.gov/data-and-tools/software-tools/bbtools/  
+     Tool: bbtools: https://jgi.doe.gov/data-and-tools/software-tools/bbtools/  
   a. remove adaptor
     ```
    bbmap/bbduk.sh in= input.fastq 
    out= output.fastq ktrim=r k=23 mink=11 hdist=1 tpe tbo 
-   ref=/bbmap/resources/adapters.fa ftm=5 qtrim=r trimq=10
-   
+   ref=/bbmap/resources/adapters.fa ftm=5 qtrim=r trimq=10 
+
    b. triming
-   ```
    bbmap/bbduk.sh in=input.fastq 
    out=output.fastq outm=output_m.fastq.gz 
    ref=/bbmap/resources/sequencing_artifacts.fa.gz 
