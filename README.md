@@ -38,7 +38,9 @@ The process including preprocess, assemly, annotation, binning and statistic ana
     ```   
    d. decontamination (bbsplit and human genome assembly GRCh38)
    ```
-   bbsplit.sh in=subject.fq ref=GRCh38.fasta basename=out_%.fq outu=subject_clean.fastq
+   bbsplit.sh in=subject.fq
+   ref=GRCh38.fasta basename=out_%.fq
+   outu=subject_clean.fastq
    bowtie2-build GRCh38_assembly.fasta
     ```
   ### 2. Assembly 
