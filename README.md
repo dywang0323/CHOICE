@@ -21,8 +21,8 @@ The process including preprocess, assemly, annotation, binning and statistic ana
     ```
    bbmap/bbduk.sh in= input.fastq 
    out= output.fastq ktrim=r k=23 mink=11 hdist=1 tpe tbo 
-   ref=/bbmap/resources/adapters.fa ftm=5 qtrim=r trimq=10 
-
+   ref=/bbmap/resources/adapters.fa ftm=5 qtrim=r trimq=10
+    ```
    b. triming
    bbmap/bbduk.sh in=input.fastq 
    out=output.fastq outm=output_m.fastq.gz 
