@@ -37,10 +37,10 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    ecc=t keepall passes=1 bits=16 prefilter
     ```   
    d. decontamination (bbsplit and human genome assembly GRCh38)
-   
-  $bbsplit.sh in=subject.fq ref=GRCh38.fasta basename=out_%.fq outu=subject_clean.fastq
-   
-   bowtie2-build GRCh38_assembly.fasta 
+   ```
+   bbsplit.sh in=subject.fq ref=GRCh38.fasta basename=out_%.fq outu=subject_clean.fastq
+   bowtie2-build GRCh38_assembly.fasta
+    ```
   ### 2. Assembly 
    
    1). Tool: Metaspades
