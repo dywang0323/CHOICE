@@ -51,8 +51,8 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    
    2). command:  
    ```
-    metaspades.py --12 subject_interleaved_reads.fq.gz -o subject
-    ```
+   metaspades.py --12 subject_interleaved_reads.fq.gz -o subject
+   ```
    
    3). quality control: calculate the mapping rate and N50
    
