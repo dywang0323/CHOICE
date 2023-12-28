@@ -9,7 +9,7 @@ There are 34 subjects from adults (2 samples for each, 31week and 37 week)and 24
 
 ## Metagenome
 The process including preprocess, assemly, annotation, binning and statistic analysis
-### 1. Preprocessing the dataset for assembly
+### 1. Preprocessing the dataset
 
  #### 1). Tools/shell commands
  * merge the datasets based on which person the dataset came from, and one person as one subject
