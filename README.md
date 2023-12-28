@@ -44,7 +44,7 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    outu=subject_clean.fastq
    bowtie2-build GRCh38_assembly.fasta
     ```
-  ### 2. Assembly 
+  #### 2. Assembly 
    
    1). Tool: Metaspades
    https://github.com/ablab/spades
