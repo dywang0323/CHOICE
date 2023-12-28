@@ -50,7 +50,9 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    https://github.com/ablab/spades
    
    2). command:
-   python /bin/metaspades.py --12 subject_interleaved_reads.fq.gz -o subject
+   ```
+   metaspades.py --12 subject_interleaved_reads.fq.gz -o subject
+    ```
    
    3). quality control: calculate the mapping rate and N50
    
