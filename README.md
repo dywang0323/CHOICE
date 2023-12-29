@@ -81,8 +81,9 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    wc -l subject_alignment.sam > subject_alignment.txt
    ``` 
    mapping rate = mapped reads/total reads  (the number of total reads is in the log file of metaspades)
-   ### 3. TPM calculation
-   1). bowtie2, ruby & shell commad  
+
+  ### 3. TPM calculation
+  1). bowtie2, ruby & shell commad  
 
 
    
