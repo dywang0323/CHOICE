@@ -60,15 +60,16 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    ```
    b. calculate mapping rate  
    Tool: pullseq, bowtie2 (Bowtie2/2.2.9-intel-2016a) and bbstate  
+
    Sellect the scaffold with sequence length > 1000bp (pullseq)
    
    ```
    pullseq -i subject_scaffold.fasta -m 1000 > subject_scaffold_min1000.fasta
    ```
-   
    create bowtie2 index file
-   
+   ```
    bowtie2-build subject_scaffold_min1000.fasta subject_min1000
+   ```
    
    map reads to the scaffold
    
