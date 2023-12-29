@@ -72,20 +72,23 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    ```
    map reads to the scaffold
    ```
-   bowtie2 -x --nounal /subject_min1000 -1 subject_eachSRR_1.fastq.gz
-                                        -2 subject_eachSRR_2.fastq.gz
+   bowtie2 -x --nounal /subject_min1000 -1 subject_R1.fastq.gz
+                                        -2 subject_R2.fastq.gz
                                         -S subject_alignmnent.sam
     ```
    count the number of mapped reads
    ```
    wc -l subject_alignment.sam > subject_alignment.txt
-   ```
-   
+   ``` 
    mapping rate = mapped reads/total reads  (the number of total reads is in the log file of metaspades)
    ### 3. Functional annotation
    1). Tools: kofam_scan  
    https://github.com/takaram/kofam_scan  
    (The official installation instruction is put in the supplementary folder)
+   2). Command
+   ```
+   kofamscan/exec_annotation -o /subject_KO.txt subject_min1000.fasta --tmp-dir subject --cpu 20
+   ```
 
    
 
