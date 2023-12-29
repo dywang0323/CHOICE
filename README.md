@@ -50,13 +50,13 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    https://github.com/ablab/spades
    
   * Command:  
-   ```
-   metaspades.py --12 subject_interleaved_reads.fq.gz -o subject
-   ```
+    ```
+    metaspades.py --12 subject_interleaved_reads.fq.gz -o subject
+    ```
  * Quality control
    a. calculate the N50 (bbtools)
    ```
-   /bbmap/stats.sh in=/subject_scaffold.fasta out=/subject_scaffold
+   stats.sh in=/subject_scaffold.fasta out=/subject_scaffold
    ```
    
    
