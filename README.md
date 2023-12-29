@@ -70,12 +70,12 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    ```
    bowtie2-build subject_scaffold_min1000.fasta subject_min1000
    ```
-   
    map reads to the scaffold
-   
+   ```
    bowtie2 -x --nounal /subject_min1000 -1 subject_eachSRR_1.fastq.gz
                                         -2 subject_eachSRR_2.fastq.gz
                                         -S subject_alignmnent.sam
+   ```
    
    count the number of mapped reads
    
