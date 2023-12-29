@@ -53,22 +53,18 @@ The process including preprocess, assemly, annotation, binning and statistic ana
     ```
     metaspades.py --12 subject_interleaved_reads.fq.gz -o subject
     ```
- * Quality control
+ * Quality control  
    a. calculate the N50 (bbtools)
    ```
    stats.sh in=/subject_scaffold.fasta out=/subject_scaffold
    ```
-   
-   
-   a. Tool: pullseq, bowtie2 (Bowtie2/2.2.9-intel-2016a) and bbstate
-   
-
-   
-   * calculate mapping rate
-   
+   b. calculate mapping rate  
+   Tool: pullseq, bowtie2 (Bowtie2/2.2.9-intel-2016a) and bbstate
+     
    Sellect the scaffold with sequence length > 1000bp (pullseq)
-   
+   ```
    pullseq -i subject_scaffold.fasta -m 1000 > subject_scaffold_min1000.fasta
+   ```
    
    create bowtie2 index file
    
