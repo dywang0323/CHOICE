@@ -59,9 +59,9 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    stats.sh in=/subject_scaffold.fasta out=/subject_scaffold
    ```
    b. calculate mapping rate  
-   Tool: pullseq, bowtie2 (Bowtie2/2.2.9-intel-2016a) and bbstate
-     
+   Tool: pullseq, bowtie2 (Bowtie2/2.2.9-intel-2016a) and bbstate  
    Sellect the scaffold with sequence length > 1000bp (pullseq)
+   
    ```
    pullseq -i subject_scaffold.fasta -m 1000 > subject_scaffold_min1000.fasta
    ```
