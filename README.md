@@ -88,9 +88,19 @@ The process including preprocess, assemly, annotation, binning and statistic ana
   ```
   add_read_count.rb subject.sam subject_min1000.fasta > subject.counted
   ```
-
-
-   
+  * Remove the unwanted information
+    ```
+    for file in /*.counted; do
+    grep -e ">" "$file" > "${file%.counted}.counted.result"
+    done
+    ```
+    ```
+    for file in /*.counted.result; do
+    sed -i "s/>//g" "$file"
+    sed -i "s/read_count_//g" "$file"
+done
+```
+ 
    ### 4. Functional annotation
    1). Tools: kofam_scan  
    https://github.com/takaram/kofam_scan  
