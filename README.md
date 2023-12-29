@@ -75,7 +75,7 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    bowtie2 -x --nounal /subject_min1000 -1 subject_eachSRR_1.fastq.gz
                                         -2 subject_eachSRR_2.fastq.gz
                                         -S subject_alignmnent.sam
-   ```
+    ```
    
    count the number of mapped reads
    
