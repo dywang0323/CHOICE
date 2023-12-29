@@ -81,10 +81,12 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    wc -l subject_alignment.sam > subject_alignment.txt
    ``` 
    mapping rate = mapped reads/total reads  (the number of total reads is in the log file of metaspades)
+   
    ### 3. Functional annotation
    1). Tools: kofam_scan  
    https://github.com/takaram/kofam_scan  
-   (The official installation instruction is put in the supplementary folder)
+   (The official installation instruction is put in the supplementary folder)  
+   
    2). Command
    ```
    kofamscan/exec_annotation -o /subject_KO.txt subject_min1000.fasta --tmp-dir subject --cpu 20
