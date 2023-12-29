@@ -98,9 +98,8 @@ The process including preprocess, assemly, annotation, binning and statistic ana
     for file in /*.counted.result; do
     sed -i "s/>//g" "$file"
     sed -i "s/read_count_//g" "$file"
-done
-```
- 
+    done
+    ```
    ### 4. Functional annotation
    1). Tools: kofam_scan  
    https://github.com/takaram/kofam_scan  
