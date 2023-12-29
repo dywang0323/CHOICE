@@ -49,18 +49,20 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    1). Tool: Metaspades
    https://github.com/ablab/spades
    
-   * Command:  
+  * Command:  
    ```
    metaspades.py --12 subject_interleaved_reads.fq.gz -o subject
    ```
+ * Quality control
+   a. calculate the N50 (bbtools)
+   ```
+   /bbmap/stats.sh in=/subject_scaffold.fasta out=/subject_scaffold
+   ```
    
-   3). quality control: calculate the mapping rate and N50
    
    a. Tool: pullseq, bowtie2 (Bowtie2/2.2.9-intel-2016a) and bbstate
    
-   * calculate the N50 (bbtools)
-   
-   /bbmap/stats.sh in=/subject_scaffold.fasta out=/subject_scaffold
+
    
    * calculate mapping rate
    
