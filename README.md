@@ -82,15 +82,13 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    ```
    
    mapping rate = mapped reads/total reads  (the number of total reads is in the log file of metaspades)
-   
-   3. Calculate the RPKM for each scaffold
-   
-   
-   4. Functional Annotation
-   
-   1). Tools: kofam_scan
-   https://github.com/takaram/kofam_scan
+   ### 3. Functional annotation
+   1). Tools: kofam_scan  
+   https://github.com/takaram/kofam_scan  
    (The official installation instruction is put in the supplementary folder)
+
+   
+
    
    5. Binning
    
