@@ -84,7 +84,7 @@ The process including preprocess, assemly, annotation, binning and statistic ana
 
   ### 3. TPM calculation
   1). bowtie2, ruby & shell commad  
-  Count the number of mapped reads  
+  * Count the number of mapped reads  
   ```
   add_read_count.rb subject.sam subject_min1000.fasta > subject.counted
   ```
