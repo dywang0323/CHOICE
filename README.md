@@ -11,7 +11,7 @@ There are 34 subjects from adults (2 samples for each, 31week and 37 week)and 24
 The process including preprocess, assemly, annotation, binning and statistic analysis
 ### 1. Preprocessing the dataset
 
- #### 1). Tools/shell commands
+ #### 1). Tools/commands
  Tool: bbtools: https://jgi.doe.gov/data-and-tools/software-tools/bbtools/ 
  * merge the datasets based on which person the dataset came from, and one person as one subject
    ```
@@ -49,7 +49,7 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    1). Tool: Metaspades
    https://github.com/ablab/spades
    
-   2). command:  
+   * Command:  
    ```
    metaspades.py --12 subject_interleaved_reads.fq.gz -o subject
    ```
