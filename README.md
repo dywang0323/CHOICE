@@ -44,12 +44,12 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    outu=subject_clean.fastq
    bowtie2-build GRCh38_assembly.fasta
     ```
-  #### 2. Assembly 
+  ### 2. Assembly 
    
    1). Tool: Metaspades
    https://github.com/ablab/spades
    
-  * Command:  
+   2). Command:  
     ```
     metaspades.py --12 subject_interleaved_reads.fq.gz -o subject
     ```
@@ -76,10 +76,10 @@ The process including preprocess, assemly, annotation, binning and statistic ana
                                         -2 subject_eachSRR_2.fastq.gz
                                         -S subject_alignmnent.sam
     ```
-   
    count the number of mapped reads
-   
+   ```
    wc -l subject_alignment.sam > subject_alignment.txt
+   ```
    
    mapping rate = mapped reads/total reads  (the number of total reads is in the log file of metaspades)
    
