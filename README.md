@@ -49,10 +49,10 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    1). Tool: Metaspades
    https://github.com/ablab/spades
    
-   2). Command:  
+   2). Command:   
     ```
-     metaspades.py --12 subject_interleaved_reads.fq.gz -o subject
-     ```
+    metaspades.py --12 subject_interleaved_reads.fq.gz -o subject
+    ```
  * Quality control  
    a. calculate the N50 (bbtools)
    ```
