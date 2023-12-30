@@ -109,19 +109,13 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    ```
    kofamscan/exec_annotation -o /subject_KO.txt subject_min1000.fasta --tmp-dir subject --cpu 20
    ```
-
+  ### 5. Binning
    
-
-   
-   5. Binning
-   
-   1). Software: metabat, CheckM
+   1).  tools: metabat, CheckM  
    https://bitbucket.org/berkeleylab/metabat/src/master/
    https://github.com/Ecogenomics/CheckM
-
-   43 MAGs can not be annotaed by MetaPhlAn 4 was used to calcuate 
    
-   6. clustering
+   ### 6. clustering
    1). seperate quence name into full length and fractionation:
    full length: grep "partial=00" your_dataset.txt > extracted_records.txt
    fractionations: grep -v "partial=00" your_dataset.txt > extracted_records.txt
