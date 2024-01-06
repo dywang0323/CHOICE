@@ -141,7 +141,7 @@ for dataset_file in "$DATASET_DIR"/*.fq.gz; do
 
 done
 ```
-### 6. Reactions and pathways profiling  
+### 6. Gene family, reactions and pathways profiling  
 1. Tool: Humann  
    https://github.com/biobakery/humann
 2. Command:  
