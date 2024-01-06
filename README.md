@@ -51,8 +51,8 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    
    2). Command:   
     ```
-    metaspades.py --12 subject_interleaved_reads.fq.gz -o subject
-    ```
+     metaspades.py --12 subject_interleaved_reads.fq.gz -o subject
+     ```
  * Quality control  
    a. calculate the N50 (bbtools)
    ```
@@ -115,7 +115,7 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    https://bitbucket.org/berkeleylab/metabat/src/master/
    https://github.com/Ecogenomics/CheckM
    
-   ### 6. clustering
+   ### 6. Clustering
    1). seperate quence name into full length and fractionation:
    full length: grep "partial=00" your_dataset.txt > extracted_records.txt
    fractionations: grep -v "partial=00" your_dataset.txt > extracted_records.txt
