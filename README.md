@@ -140,7 +140,10 @@ for dataset_file in "$DATASET_DIR"/*.fq.gz; do
 
 done
 ```
-### 6. Reactions and pathways profiling
+### 6. Reactions and pathways profiling  
+1. Tool: Humann  
+   https://github.com/biobakery/humann
+2. Command:  
 ```
 model load Python/3.9.6-GCCcore-11.2.0
 conda active mpa
