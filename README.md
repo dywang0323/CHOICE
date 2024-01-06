@@ -173,6 +173,13 @@ metabat -i /CHO01B_min1000.fasta
        -o /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Binning/MAGs_0703/CHO01B
       -a /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Binning/Binning_B/Contig_depths/CHO01B.txt -m 2000
 ```
+* Check the quality of MAGs
+```
+module load Python/3.9.5-GCCcore-10.3.0
+checkm lineage_wf -f /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Binning/checkM_0703.txt -t 10 -x fa
+                 --pplacer_threads 1 /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Binning/MAGs_0703
+                 /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Binning/QC_0703
+```
 ### 8. Clustering
 1). seperate quence name into full length and fractionation:  
 * Full length  
