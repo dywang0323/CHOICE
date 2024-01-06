@@ -148,13 +148,18 @@ humann --input /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/PREPROC
 https://bitbucket.org/berkeleylab/metabat/src/master/  
 https://github.com/Ecogenomics/CheckM  
 2). Command:  
-* Prepare the input files:
+* Prepare the input files
 ```
 samtools view -b -S -o /scratch/dywang/LW3_top/LW3_Top.bam /scratch/dywang/LW3_top/LW3_Top.sam
 ```
 ```
 samtools sort -o /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Bining/Maternal/Maternal.sorted.bam /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Bining/Maternal/Maternal.bam
 ```
+* Generate the depth file
+```
+metabat/jgi_summarize_bam_contig_depths --outputDepth PATH_TO_OUTPUT/CHO56B.txt PATH_to_BAM/CHO56B.sorted.bam
+```
+
 
 
 ### 8. Clustering
