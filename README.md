@@ -137,7 +137,12 @@ for dataset_file in "$DATASET_DIR"/*.fq.gz; do
 
 done
 ```
-  
+### 7. profiling the reactions and pathways
+```
+model load Python/3.9.6-GCCcore-11.2.0
+conda active mpa
+humann --input /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/PREPROCESS/EC_B1/CHO56B4to5Month.fq.gz --metaphlan-options "--bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/metaphlan_databases" --output /scratch/dywang/humann/
+```  
   ### 5. Binning
    
    1).  tools: metabat, CheckM  
@@ -157,25 +162,6 @@ done
    Convert the .lib into fasta:
    seqkit seq -o protease.fastq /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/protease.lib
    
-   seqkit fq2fa protease.fastq -o /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/protease.fasta
-
-   
-
-      1). 
-      
-      2). 
-
-
-# profiling the reactions and pathways
-model load Python/3.9.6-GCCcore-11.2.0
-conda active mpa
-humann --input /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/PREPROCESS/EC_B1/CHO56B4to5Month.fq.gz --metaphlan-options "--bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/metaphlan_databases" --output /scratch/dywang/humann/
-
-
-
-   
-   
-   
-   
+   seqkit fq2fa protease.fastq -o /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/protease.fasta 
     
 # Metaproteome
