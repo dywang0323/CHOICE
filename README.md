@@ -143,15 +143,21 @@ model load Python/3.9.6-GCCcore-11.2.0
 conda active mpa
 humann --input /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/PREPROCESS/EC_B1/CHO56B4to5Month.fq.gz --metaphlan-options "--bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/metaphlan_databases" --output /scratch/dywang/humann/
 ```
-### 5. Binning
+### 8. Binning
 1).  tools: metabat, CheckM  
 https://bitbucket.org/berkeleylab/metabat/src/master/  
 https://github.com/Ecogenomics/CheckM
-   
-   ### 6. Clustering
-   1). seperate quence name into full length and fractionation:
-   full length: grep "partial=00" your_dataset.txt > extracted_records.txt
-   fractionations: grep -v "partial=00" your_dataset.txt > extracted_records.txt
+
+### 9. Clustering
+1). seperate quence name into full length and fractionation:  
+Full length  
+```
+grep "partial=00" your_dataset.txt > extracted_records.txt
+```
+Fraction
+```
+grep -v "partial=00" your_dataset.txt > extracted_records.txt
+```
    
    7. Peptidase annotation
    
