@@ -133,7 +133,10 @@ for dataset_file in "$DATASET_DIR"/*.fq.gz; do
     fi
 
     # Run MetaPhlAn on each dataset
-    metaphlan -t rel_ab_w_read_stats --add_viruses  "${DATASET_DIR}/${filename_without_extension}.fastq" --input_type fastq -o "/ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/PREPROCESS/Error_correction_B/${filename_without_extension}.txt" --bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/metaphlan_databases --nproc 30
+    metaphlan -t rel_ab_w_read_stats --add_viruses  "${DATASET_DIR}/${filename_without_extension}.fastq"
+                                     --input_type fastq
+                                     -o "/ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/PREPROCESS/Error_correction_B/${filename_without_extension}.txt"
+                                     --bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/metaphlan_databases --nproc 30
 
 done
 ```
@@ -141,7 +144,9 @@ done
 ```
 model load Python/3.9.6-GCCcore-11.2.0
 conda active mpa
-humann --input /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/PREPROCESS/EC_B1/CHO56B4to5Month.fq.gz --metaphlan-options "--bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/metaphlan_databases" --output /scratch/dywang/humann/
+humann --input /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/PREPROCESS/EC_B1/CHO56B4to5Month.fq.gz
+       --metaphlan-options "--bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/metaphlan_databases"
+      --output /scratch/dywang/humann/
 ```
 ### 7. Binning
 1).  tools: metabat, CheckM  
@@ -150,17 +155,23 @@ https://github.com/Ecogenomics/CheckM
 2). Command:  
 * Prepare the input files
 ```
-samtools view -b -S -o /scratch/dywang/LW3_top/LW3_Top.bam /scratch/dywang/LW3_top/LW3_Top.sam
+samtools view -b -S -o /scratch/dywang/LW3_top/LW3_Top.bam
+                      /scratch/dywang/LW3_top/LW3_Top.sam
 ```
 ```
-samtools sort -o /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Bining/Maternal/Maternal.sorted.bam /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Bining/Maternal/Maternal.bam
+samtools sort -o /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Bining/Maternal/Maternal.sorted.bam
+               /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Bining/Maternal/Maternal.bam
 ```
 * Generate the depth file
 ```
-metabat/jgi_summarize_bam_contig_depths --outputDepth PATH_TO_OUTPUT/CHO56B.txt PATH_to_BAM/CHO56B.sorted.bam
+metabat/jgi_summarize_bam_contig_depths --outputDepth PATH_TO_OUTPUT/CHO56B.txt
+                                          PATH_to_BAM/CHO56B.sorted.bam
 ```
-
-
+* Binning
+```
+metabat -i /CHO01B_min1000.fasta
+       -o /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Binning/MAGs_0703/CHO01B
+      -a /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Binning/Binning_B/Contig_depths/CHO01B.txt -m 2000
 
 ### 8. Clustering
 1). seperate quence name into full length and fractionation:  
