@@ -109,6 +109,35 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    ```
    kofamscan/exec_annotation -o /subject_KO.txt subject_min1000.fasta --tmp-dir subject --cpu 20
    ```
+  ### 6. Taxonomic profiling
+  1). Tool: MetaPhlAn 4  
+      https://github.com/biobakery/MetaPhlAn/wiki/MetaPhlAn-4
+  2). Install and build the database
+  ```
+  metaphlan --install --bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/Database_meta
+  ```
+  3). Databasae searching
+  ```
+  # Define the directory where your datasets are stored
+DATASET_DIR="/ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/PREPROCESS/Error_correction_B"
+
+# Iterate over the files in the dataset directory
+for dataset_file in "$DATASET_DIR"/*.fq.gz; do
+    # Get the filename without the directory path and extension
+    filename=$(basename "$dataset_file")
+    filename_without_extension="${filename%.*}"
+
+    # Decompress the input file if the uncompressed file does not exist
+    if [ ! -f "${DATASET_DIR}/${filename_without_extension}.fastq" ]; then
+        gunzip -c "$dataset_file" > "${DATASET_DIR}/${filename_without_extension}.fastq"
+    fi
+
+    # Run MetaPhlAn on each dataset
+    metaphlan -t rel_ab_w_read_stats --add_viruses  "${DATASET_DIR}/${filename_without_extension}.fastq" --input_type fastq -o "/ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/PREPROCESS/Error_correction_B/${filename_without_extension}.txt" --bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/metaphlan_databases --nproc 30
+
+done
+```
+  
   ### 5. Binning
    
    1).  tools: metabat, CheckM  
@@ -130,28 +159,12 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    
    seqkit fq2fa protease.fastq -o /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/protease.fasta
 
-   8. Taxonomic profiling
-      Software: MetaPhlAn 4
-      https://github.com/biobakery/MetaPhlAn/wiki/MetaPhlAn-4
-      1). Install and build the database:
-      metaphlan --install --bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/Database_meta
-      2). Databasae searching
-      Define the directory where your datasets are stored
-DATASET_DIR="  "
+   
 
-for dataset_file in "$DATASET_DIR"/*.fq.gz; do
-     
-    filename=$(basename "$dataset_file")
-    filename_without_extension="${filename%.*}"
+      1). 
+      
+      2). 
 
-     
-    if [ ! -f "${DATASET_DIR}/${filename_without_extension}.fastq" ]; then
-        gunzip -c "$dataset_file" > "${DATASET_DIR}/${filename_without_extension}.fastq"
-    fi
-
-    metaphlan "${DATASET_DIR}/${filename_without_extension}.fastq" --input_type fastq -o "${filename_without_extension}.txt" --bowtie2db Database_meta
-
-done
 
 # profiling the reactions and pathways
 model load Python/3.9.6-GCCcore-11.2.0
