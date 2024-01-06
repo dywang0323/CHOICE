@@ -109,7 +109,7 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    ```
    kofamscan/exec_annotation -o /subject_KO.txt subject_min1000.fasta --tmp-dir subject --cpu 20
    ```
-  ### 6. Taxonomic profiling
+  ### 5. Taxonomic profiling
   1). Tool: MetaPhlAn 4  
       https://github.com/biobakery/MetaPhlAn/wiki/MetaPhlAn-4  
   2). Install and build the database
@@ -137,24 +137,24 @@ for dataset_file in "$DATASET_DIR"/*.fq.gz; do
 
 done
 ```
-### 7. Reactions and pathways profiling
+### 6. Reactions and pathways profiling
 ```
 model load Python/3.9.6-GCCcore-11.2.0
 conda active mpa
 humann --input /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/PREPROCESS/EC_B1/CHO56B4to5Month.fq.gz --metaphlan-options "--bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/metaphlan_databases" --output /scratch/dywang/humann/
 ```
-### 8. Binning
+### 7. Binning
 1).  tools: metabat, CheckM  
 https://bitbucket.org/berkeleylab/metabat/src/master/  
 https://github.com/Ecogenomics/CheckM
 
-### 9. Clustering
+### 8. Clustering
 1). seperate quence name into full length and fractionation:  
-Full length  
+* Full length  
 ```
 grep "partial=00" your_dataset.txt > extracted_records.txt
 ```
-Fraction
+* Fraction
 ```
 grep -v "partial=00" your_dataset.txt > extracted_records.txt
 ```
