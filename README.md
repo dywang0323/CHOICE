@@ -116,7 +116,7 @@ The process including preprocess, assemly, annotation, binning and statistic ana
   ```
   metaphlan --install --bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/Database_meta
   ```
-  3). Databasae searching
+  3). Command:
   ```
   # Define the directory where your datasets are stored
 DATASET_DIR="/ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/PREPROCESS/Error_correction_B"
