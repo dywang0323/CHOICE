@@ -146,7 +146,16 @@ humann --input /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/PREPROC
 ### 7. Binning
 1).  tools: metabat, CheckM  
 https://bitbucket.org/berkeleylab/metabat/src/master/  
-https://github.com/Ecogenomics/CheckM
+https://github.com/Ecogenomics/CheckM  
+2). Command:  
+* Prepare the input files:
+```
+samtools view -b -S -o /scratch/dywang/LW3_top/LW3_Top.bam /scratch/dywang/LW3_top/LW3_Top.sam
+```
+```
+samtools sort -o /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Bining/Maternal/Maternal.sorted.bam /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Bining/Maternal/Maternal.bam
+```
+
 
 ### 8. Clustering
 1). seperate quence name into full length and fractionation:  
