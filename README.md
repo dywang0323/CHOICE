@@ -172,7 +172,7 @@ metabat/jgi_summarize_bam_contig_depths --outputDepth PATH_TO_OUTPUT/CHO56B.txt
 metabat -i /CHO01B_min1000.fasta
        -o /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Binning/MAGs_0703/CHO01B
       -a /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Binning/Binning_B/Contig_depths/CHO01B.txt -m 2000
-
+```
 ### 8. Clustering
 1). seperate quence name into full length and fractionation:  
 * Full length  
