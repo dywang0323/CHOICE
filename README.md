@@ -111,7 +111,7 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    ```
   ### 6. Taxonomic profiling
   1). Tool: MetaPhlAn 4  
-      https://github.com/biobakery/MetaPhlAn/wiki/MetaPhlAn-4
+      https://github.com/biobakery/MetaPhlAn/wiki/MetaPhlAn-4  
   2). Install and build the database
   ```
   metaphlan --install --bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/Database_meta
