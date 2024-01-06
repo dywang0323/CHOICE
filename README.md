@@ -137,7 +137,7 @@ for dataset_file in "$DATASET_DIR"/*.fq.gz; do
 
 done
 ```
-### 7. profiling the reactions and pathways
+### 7. Reactions and pathways profiling
 ```
 model load Python/3.9.6-GCCcore-11.2.0
 conda active mpa
