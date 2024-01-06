@@ -46,7 +46,7 @@ The process including preprocess, assemly, annotation, binning and statistic ana
     ```
   ### 2. Assembly 
    
-  1). Tool: Metaspades
+  1). Tool: Metaspades  
   https://github.com/ablab/spades
    
   2). Command:
