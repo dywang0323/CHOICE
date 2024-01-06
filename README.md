@@ -15,7 +15,7 @@ The process including preprocess, assemly, annotation, binning and statistic ana
  Tool: bbtools: https://jgi.doe.gov/data-and-tools/software-tools/bbtools/ 
  * merge the datasets based on which person the dataset came from, and one person as one subject
    ```
-   cat person1_rep1.fastq person1_replicate2.fastq > person1.fastq
+   cat person1_rep1.fastq person1_rep2.fastq person1_rep3 > person1.fastq
  * preprocessing the datasts, including remove adaptor, triming and error correction      
   a. remove adaptor
     ```
@@ -142,12 +142,11 @@ done
 model load Python/3.9.6-GCCcore-11.2.0
 conda active mpa
 humann --input /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/PREPROCESS/EC_B1/CHO56B4to5Month.fq.gz --metaphlan-options "--bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/metaphlan_databases" --output /scratch/dywang/humann/
-```  
-  ### 5. Binning
-   
-   1).  tools: metabat, CheckM  
-   https://bitbucket.org/berkeleylab/metabat/src/master/
-   https://github.com/Ecogenomics/CheckM
+```
+### 5. Binning
+1).  tools: metabat, CheckM  
+https://bitbucket.org/berkeleylab/metabat/src/master/  
+https://github.com/Ecogenomics/CheckM
    
    ### 6. Clustering
    1). seperate quence name into full length and fractionation:
