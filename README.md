@@ -12,7 +12,8 @@ The process including preprocess, assemly, annotation, binning and statistic ana
 ### 1. Preprocessing the dataset
 
  #### 1). Tools/commands
- Tool: bbtools: https://jgi.doe.gov/data-and-tools/software-tools/bbtools/ 
+ Tool: bbtools:  
+ https://jgi.doe.gov/data-and-tools/software-tools/bbtools/ 
  * merge the datasets based on which person the dataset came from, and one person as one subject
    ```
    cat person1_rep1.fastq person1_rep2.fastq person1_rep3 > person1.fastq
