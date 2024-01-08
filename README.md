@@ -153,9 +153,10 @@ humann --input /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/PREPROC
       --output /scratch/dywang/humann/
 ```
 ### 7. Binning
-1).  tools: metabat, CheckM  
+1).  tools: metabat, CheckM and gtdbtk  
 https://bitbucket.org/berkeleylab/metabat/src/master/  
 https://github.com/Ecogenomics/CheckM  
+taxonomic classifications  
 2). Command:  
 * Prepare the input files
 ```
@@ -183,6 +184,19 @@ module load Python/3.9.5-GCCcore-10.3.0
 checkm lineage_wf -f /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Binning/checkM_0703.txt -t 10 -x fa
                  --pplacer_threads 1 /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Binning/MAGs_0703
                  /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Binning/QC_0703
+```
+* Taxonomic classifications
+```
+ module load HMMER/3.2.1-foss-2017b
+ module load pplacer/1.1.alpha19
+ module load FastANI/1.31-foss-2019b
+ module load FastTree/2.1.11-GCCcore-8.3.0
+ module load Python/3.9.5-GCCcore-10.3.0
+
+ conda activate gtdbtk-2.1.1
+ module load GTDB-Tk/1.3.0-foss-2019b-Python-3.8.2
+ module load DendroPy/4.5.2-GCCcore-10.2.0
+gtdbtk classify_wf --extension fa --genome_dir /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Binning/MAGs_HM_0704 --out_dir /ourdisk/hpc/nullspace/dywang/dont_archive/CHOICE/gtdbtk --cpus 40
 ```
 ### 8. Clustering
 1). seperate quence name into full length and fractionation:  
