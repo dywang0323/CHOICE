@@ -156,7 +156,7 @@ humann --input /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/PREPROC
 1).  tools: metabat, CheckM and gtdbtk  
 https://bitbucket.org/berkeleylab/metabat/src/master/  
 https://github.com/Ecogenomics/CheckM  
-taxonomic classifications  
+https://ecogenomics.github.io/GTDBTk/index.html   
 2). Command:  
 * Prepare the input files
 ```
