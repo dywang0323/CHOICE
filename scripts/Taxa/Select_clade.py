@@ -1,23 +1,25 @@
 import pandas as pd
 
-# Function to extract the specific substring
-def extract_specific_substring(clade_name):
-    if 's__' in clade_name:
-        return clade_name.split('s__')[-1].split('|')[0]
-    return None
+# Load the dataset from the text file
+file_path = '/ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/metaphlan/Maternal/merged_maternal_table.txt'
 
-# Load the dataset from a .txt file
-file_path = '/ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/metaphlan/Maternal/merged_maternal_table.txt'  # Replace with your file path
-# Adjust read_csv parameters as needed (like sep, header, etc.)
-data = pd.read_csv(file_path, sep='\t', header=None)  # Assuming tab-separated values
+# Load the data with tab as the delimiter and handling commented lines
+data = pd.read_csv(file_path, delimiter='\t', comment='#')
 
-# Assuming the first column contains the 'clade_name', replace '0' with the correct column index if different
-data.columns = ['clade_name'] + [f'column_{i}' for i in range(1, len(data.columns))]
+# Print the column names to check them
+print("Column names:", data.columns)
 
-# Filter and modify the dataset
-data_with_s = data[data['clade_name'].str.contains("s__")]
-data_with_s['clade_name'] = data_with_s['clade_name'].apply(extract_specific_substring)
+# Replace 'clade_name' with the actual column name from your data, if different
+column_name = 'clade_name'  # Update this to the actual column name
 
-# Save the newly modified dataset to a CSV file
-output_file_path = '/ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/metaphlan/Maternal/Species.csv'  # Replace with your desired output path
-data_with_s.to_csv(output_file_path, index=False)
+# Filter the data for records where the specified column ends with 's__' followed by more characters
+filtered_data = data[data[column_name].str.contains('s__[^|]*$')]
+
+# Modify the column to keep only the part after 's__'
+filtered_data[column_name] = filtered_data[column_name].str.extract('s__(.*)')
+
+# Save the modified data to a CSV file
+output_csv_path = '/ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/metaphlan/Maternal/species.csv'
+filtered_data.to_csv(output_csv_path, index=False)
+
+print("Filtered data saved to:", output_csv_path)
