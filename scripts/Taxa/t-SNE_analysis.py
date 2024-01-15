@@ -37,16 +37,16 @@ tsne_df['Dataset'] = dataset_labels
 
 # Define a custom color palette
 color_map = {
-    '2week_CHOICE': 'blue',
+    '2week_CHOICE': '#3081D0',
     '2week_CONV': 'lightblue',
     '2month_CHOICE': 'green',
     '2month_CONV': 'lightgreen',
     '4month_CHOICE': 'grey',
     '4month_CONV': 'lightgrey',
-    '31week_CHOICE': 'red',
-    '31week_CONV': 'orange',
+    '31week_CHOICE': '#BF3131',
+    '31week_CONV': '#EC8F5E',
     '37week_CHOICE': '#ffc8dd',
-    '37week_CONV': 'yellow'
+    '37week_CONV': '#F4F27E'
 }
 
 # Map the dataset labels to colors
