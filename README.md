@@ -235,6 +235,7 @@ cd-hit-2d -i /min50/Full_length/nr_65_0.9
         > /min50/Fragment/nr_65_0.9_fragment.log
 ```
 * 40% identity
+```
 cd-hit -i /min50/Full_length/nr_65_0.9
       -o /min50/Full_length/nr_40_0.9
       -c 0.4 -n 2  -d 0  -g 1 -p 1 -T 35 -M 0 -G 0 -aS 0.9 -aL 0.9
