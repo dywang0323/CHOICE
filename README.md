@@ -200,6 +200,7 @@ gtdbtk classify_wf --extension fa --genome_dir /ourdisk/hpc/prebiotics/dywang/Pr
 ```
 ### 8. Clustering
 1). seperate quence name into full length and fractionation:  
+```
 * Full length  
 ```
 grep "partial=00" your_dataset.txt > extracted_records.txt
@@ -208,6 +209,24 @@ grep "partial=00" your_dataset.txt > extracted_records.txt
 ```
 grep -v "partial=00" your_dataset.txt > extracted_records.txt
 ```
+cluster at 40%, 65% and 90% similarity
+* 90%
+```
+module load CD-HIT/4.8.1-foss-2018b  
+cd-hit -i /min50/Full_length/Full_length.fasta
+      -o /min50/Full_length/nr_90_0.9
+      -c 0.9 -n 5  -d 0  -g 1 -p 1 -T 35 -M 0 -G 0 -aS 0.9 -aL 0.9
+     > /min50/Full_length/nr_90_0.9.log  
+cd-hit-2d -i /min50/Full_length/nr_90_0.9 
+        -i2 /min50/Fragment/Fragment.fasta 
+        -o /min50/Fragment/nr_90_0.9_fragment 
+        -c 0.9 -n 5  -d 0  -g 1 -p 1 -T 35 -M 0 -G 0 -aS 0.9 
+        > /min50/Fragment/nr_90_0.9_fragment.log  
+```
+
+
+
+
    
    7. Peptidase annotation
    
