@@ -200,7 +200,7 @@ gtdbtk classify_wf --extension fa --genome_dir /ourdisk/hpc/prebiotics/dywang/Pr
 ```
 ### 8. Clustering
 1). seperate quence name into full length and fractionation:  
-```
+
 * Full length  
 ```
 grep "partial=00" your_dataset.txt > extracted_records.txt
