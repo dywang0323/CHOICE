@@ -241,12 +241,20 @@ cd-hit -i /min50/Full_length/nr_65_0.9
       -c 0.4 -n 2  -d 0  -g 1 -p 1 -T 35 -M 0 -G 0 -aS 0.9 -aL 0.9
       > /min50/Full_length/nr_40_0.9.log
 ```
-
-
-
-
-   
-   7. Peptidase annotation
+* Merge the full-length and fragment clusters in each step
+```
+/Software/cd-hit-v4.8.1-2019-0228/clstr_merge.pl /min50/Full_length/nr_40_0.9.clstr
+                                                /min50/Fragment/nr_40_0.9_fragment.clstr
+                                             > /min50/1st_Merge/nr_40_0.9_full_fragment.clstr
+```
+* Combine clusters at three level
+```
+/Software/cd-hit-v4.8.1-2019-0228/clstr_rev.pl /nr_90_0.9_full_fragment.clstr
+                                              /nr_65_0.9_full_fragment.clstr
+                                             /nr_40_0.9_full_fragment.clstr
+                                          > /final.clstr
+```
+7. Peptidase annotation
    
    Download the peptidase database from:
    https://www.ebi.ac.uk/merops/download_list.shtml
