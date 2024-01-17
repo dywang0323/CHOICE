@@ -209,8 +209,8 @@ grep "partial=00" your_dataset.txt > extracted_records.txt
 ```
 grep -v "partial=00" your_dataset.txt > extracted_records.txt
 ```
-cluster at 40%, 65% and 90% similarity
-* 90%
+Cluster at 40%, 65% and 90% identity
+* 90% identity
 ```
 module load CD-HIT/4.8.1-foss-2018b  
 cd-hit -i /min50/Full_length/Full_length.fasta
@@ -222,6 +222,23 @@ cd-hit-2d -i /min50/Full_length/nr_90_0.9
         -o /min50/Fragment/nr_90_0.9_fragment 
         -c 0.9 -n 5  -d 0  -g 1 -p 1 -T 35 -M 0 -G 0 -aS 0.9 
         > /min50/Fragment/nr_90_0.9_fragment.log  
+```
+* 65% identity
+```
+cd-hit -i /min50/Full_length/nr_90_0.9
+      -o /min50/Full_length/nr_65_0.9
+      -c 0.65 -n 4  -d 0  -g 1 -p 1 -T 35 -M 0 -G 0 -aS 0.9 -aL 0.9
+     > /min50/Full_length/nr_65_0.9.log
+cd-hit-2d -i /min50/Full_length/nr_65_0.9
+        -i2 /min50/Fragment/nr_90_0.9_fragment
+        -o /min50/Fragment/nr_65_0.9_fragment -c 0.65 -n 4  -d 0  -g 1 -p 1 -T 40 -M 0 -G 0 -aS 0.9
+        > /min50/Fragment/nr_65_0.9_fragment.log
+```
+* 40% identity
+cd-hit -i /min50/Full_length/nr_65_0.9
+      -o /min50/Full_length/nr_40_0.9
+      -c 0.4 -n 2  -d 0  -g 1 -p 1 -T 35 -M 0 -G 0 -aS 0.9 -aL 0.9
+      > /min50/Full_length/nr_40_0.9.log
 ```
 
 
