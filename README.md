@@ -254,6 +254,8 @@ cd-hit -i /min50/Full_length/nr_65_0.9
                                              /nr_40_0.9_full_fragment.clstr
                                           > /final.clstr
 ```
+* Filter out clusters that appear in fewer than 10 subjects
+  Before filtering, we got 1647743 clusters in maternal samples and 478559 clusters in infant samples
 7. Peptidase annotation
    
    Download the peptidase database from:
