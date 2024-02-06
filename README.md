@@ -198,6 +198,13 @@ checkm lineage_wf -f /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/B
  module load DendroPy/4.5.2-GCCcore-10.2.0
 gtdbtk classify_wf --extension fa --genome_dir /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Binning/MAGs_HM_0704 --out_dir /ourdisk/hpc/nullspace/dywang/dont_archive/CHOICE/gtdbtk --cpus 40
 ```
+* Removing the duplicate MAGs
+  conda activate drep_env
+  dRep dereplicate /check
+                   -g /duplicate_genome/*.fa
+                   -pa 0.9 -sa 0.95 -nc 0.6 --S_algorithm gANI -p 40
+```
+
 ### 8. Clustering
 1). seperate quence name into full length and fractionation:  
 
