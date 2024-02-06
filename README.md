@@ -157,6 +157,7 @@ humann --input /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/PREPROC
 https://bitbucket.org/berkeleylab/metabat/src/master/  
 https://github.com/Ecogenomics/CheckM  
 https://ecogenomics.github.io/GTDBTk/index.html   
+https://github.com/MrOlm/drep  
 2). Command:  
 * Prepare the input files
 ```
@@ -197,6 +198,7 @@ checkm lineage_wf -f /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/B
  module load GTDB-Tk/1.3.0-foss-2019b-Python-3.8.2
  module load DendroPy/4.5.2-GCCcore-10.2.0
 gtdbtk classify_wf --extension fa --genome_dir /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Binning/MAGs_HM_0704 --out_dir /ourdisk/hpc/nullspace/dywang/dont_archive/CHOICE/gtdbtk --cpus 40
+
 ```
 * Removing the duplicate MAGs
   conda activate drep_env
