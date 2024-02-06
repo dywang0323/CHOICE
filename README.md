@@ -200,11 +200,11 @@ checkm lineage_wf -f /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/B
 gtdbtk classify_wf --extension fa --genome_dir /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Binning/MAGs_HM_0704 --out_dir /ourdisk/hpc/nullspace/dywang/dont_archive/CHOICE/gtdbtk --cpus 40
 ```
 * Removing the duplicate MAGs
-  ```
-  conda activate drep_env
-  dRep dereplicate /check
-                   -g /duplicate_genome/*.fa
-                   -pa 0.9 -sa 0.95 -nc 0.6 --S_algorithm gANI -p 40
+```
+conda activate drep_env
+dRep dereplicate /check
+                 -g /duplicate_genome/*.fa
+                 -pa 0.9 -sa 0.95 -nc 0.6 --S_algorithm gANI -p 40
 ```
 
 ### 8. Clustering
