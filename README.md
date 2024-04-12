@@ -143,7 +143,7 @@ for dataset_file in "$DATASET_DIR"/*.fq.gz; do
                                      --bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/metaphlan_databases --nproc 30
 
 done
-
+```
 # Using the Kaiju to profiling the Taxonmic composition by scarfold
 
 # Running Kaiju
