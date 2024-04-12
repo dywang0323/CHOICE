@@ -112,7 +112,10 @@ The process including preprocess, assemly, annotation, binning and statistic ana
    ```
   ### 5. Taxonomic profiling
   1). Tool: MetaPhlAn 4  
-      https://github.com/biobakery/MetaPhlAn/wiki/MetaPhlAn-4  
+      https://github.com/biobakery/MetaPhlAn/wiki/MetaPhlAn-4   
+      or  
+      Tool: Kaiju  
+      https://github.com/bioinformatics-centre/kaiju  
   2). Install and build the database
   ```
   metaphlan --install --bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/Database_meta
@@ -140,6 +143,13 @@ for dataset_file in "$DATASET_DIR"/*.fq.gz; do
                                      --bowtie2db /ourdisk/hpc/prebiotics/dywang/Software/metaphlan_databases --nproc 30
 
 done
+
+# Using the Kaiju to profiling the Taxonmic composition by scarfold  
+# Running Kaiju  
+kaiju -z 40 -t /nodes.dmp 
+      -f /ourdisk/hpc/prebiotics/dywang/Software/kaijudb/kaiju_db_refseq_nr.fmi 
+      -p -i /work/TEDDY/DW/CHOICE/ORF/ORF_CHOICE_B/CHO56B_min1000.fasta 
+      -o /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Kaiju/Infant/CHO56B.txt -e 5 -m 12 -s 70
 ```
 ### 6. Gene family, reactions and pathways profiling  
 1. Tool: Humann  
