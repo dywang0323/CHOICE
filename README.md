@@ -144,12 +144,21 @@ for dataset_file in "$DATASET_DIR"/*.fq.gz; do
 
 done
 
-# Using the Kaiju to profiling the Taxonmic composition by scarfold  
-# Running Kaiju  
+# Using the Kaiju to profiling the Taxonmic composition by scarfold
+
+# Running Kaiju
+```
 kaiju -z 40 -t /nodes.dmp 
       -f /ourdisk/hpc/prebiotics/dywang/Software/kaijudb/kaiju_db_refseq_nr.fmi 
       -p -i /work/TEDDY/DW/CHOICE/ORF/ORF_CHOICE_B/CHO56B_min1000.fasta 
       -o /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Kaiju/Infant/CHO56B.txt -e 5 -m 12 -s 70
+```
+# Adding taxa names to output file
+```
+kaiju-addTaxonNames -t /ourdisk/hpc/prebiotics/dywang/Software/kaijudb/nodes.dmp 
+      -n /ourdisk/hpc/prebiotics/dywang/Software/kaijudb/names.dmp 
+      -i /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Kaiju/Infant/CHO56B.txt 
+      -o /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/Kaiju/Infant/CHO56B_Name.txt
 ```
 ### 6. Gene family, reactions and pathways profiling  
 1. Tool: Humann  
