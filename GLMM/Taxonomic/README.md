@@ -1,4 +1,4 @@
-## The workflow to do GLMM analysis on the Taonomic composition
+# The workflow to do GLMM analysis on the Taonomic composition
 
-# Prepare the files
+## Prepare the files
 
