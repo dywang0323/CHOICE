@@ -13,6 +13,9 @@ def consolidate_cluster_values(input_file_path, output_file_path):
     # Group the data by 'Taxa' and calculate the sum for each group
     cluster_sum = data.groupby('Taxa').sum()
     
+    # Remove rows where all values are 0
+    cluster_sum = cluster_sum[(cluster_sum != 0).any(axis=1)]
+    
     # Reset the index to turn 'Taxa' back into a column
     cluster_sum.reset_index(inplace=True)
     
