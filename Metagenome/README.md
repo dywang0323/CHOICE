@@ -1,5 +1,5 @@
 # Metagenome
-The process including preprocess, assemly, annotation, binning and statistic analysis
+The metagenomics analysis was carried our by reference-based and assembly-based strategies.
 ### 1. Preprocessing the dataset
 
  #### 1). Tools/commands
