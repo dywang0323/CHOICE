@@ -1,5 +1,6 @@
 # Metagenome
 The metagenomics analysis was carried our by reference-based and assembly-based strategies.
+## Assembly-based approach
 ### 1. Preprocessing the dataset
 
  #### 1). Tools/commands
@@ -275,6 +276,9 @@ cd-hit -i /min50/Full_length/nr_65_0.9
 ```
 * Filter out clusters that appear in fewer than 10 subjects  
   Before filtering, we got 1647743 clusters in maternal samples and 478559 clusters in infant samples
+## Reference-based approach  
+Biobakary workflow  
+
 7. Peptidase annotation
    
    Download the peptidase database from:
@@ -283,6 +287,7 @@ cd-hit -i /min50/Full_length/nr_65_0.9
    Convert the .lib into fasta:
    seqkit seq -o protease.fastq /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/protease.lib
    
-   seqkit fq2fa protease.fastq -o /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/protease.fasta 
+   seqkit fq2fa protease.fastq -o /ourdisk/hpc/prebiotics/dywang/Projects/CHOICE/Metagenome/protease.fasta
+  
     
 
